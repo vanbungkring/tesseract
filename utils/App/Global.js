@@ -1,8 +1,9 @@
-const config = require('config');
-const mongoose = require('mongoose');
-const output = require('../Common/Output.js');
-const vm = require('../../models/vm.js');
-const path = require('path').resolve();
+let config = require('config');
+let mongoose = require('mongoose');
+let output = require('../Common/Output.js');
+let vm = require('../../models/vm.js');
+let path = require('path').resolve();
+let _  = require('underscore');
 class Global {
   constructor(global) {
     this.global = global;
@@ -14,6 +15,7 @@ class Global {
     this.global.PATH = path;
     this.global.VM = vm;
     this.global.CONFIG = config;
+    this.global._ = _;
   }
 }
 module.exports = Global;
