@@ -3,7 +3,7 @@ class Locals {
     this.app = app;
     this.configure();
   }
-  configure(){
+  configure() {
 
   }
 }

@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 let output = require('../Common/Output.js');
 let vm = require('../../models/vm.js');
 let path = require('path').resolve();
-let _  = require('underscore');
+let _ = require('underscore');
 class Global {
   constructor(global) {
     this.global = global;

@@ -4,10 +4,9 @@ let controller = {
   ping: ping
 }
 
-function ping(req, res) {
+async function ping(req, res) {
   let interactor = new AppInteractor();
-
-  interactor.ping().then(function(result) {
+  await interactor.ping().then(function(result) {
     return res.status(200).send(OUTPUT(true, result, []));
   }, function(err) {
     var arr = [];
@@ -17,9 +16,9 @@ function ping(req, res) {
 
 }
 
-function index(req, res) {
+async function index(req, res) {
   let interactor = new AppInteractor();
-  interactor.branch().then(function(result) {
+  await interactor.branch().then(function(result) {
     return res.status(200).send(OUTPUT(true, result, []));
   }, function(err) {
     var arr = [];
